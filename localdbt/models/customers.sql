@@ -1,3 +1,5 @@
+{{ config(materialized='table', file_format='delta') }}
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}
